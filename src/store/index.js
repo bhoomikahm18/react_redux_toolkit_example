@@ -5,20 +5,21 @@ const counterSlice = createSlice({
   initialState: { counter: 0 },
   reducers: {
     increment(state, action) {
-      state.counter + 1;
+      state.counter++;
     },
     decrement(state, action) {
-      state.counter - 1;
+      state.counter--;
     },
     reset(state, action) {
-      0;
+      state.counter++;
     },
     addByTen(state, action) {
-      state.counter + action.payload;
+      state.counter += action.payload;
     },
   },
 });
-export default actions = counterSlice.actions;
 const store = configureStore({
   reducer: counterSlice.reducer,
 });
+export const actions = counterSlice.actions;
+export default store;
