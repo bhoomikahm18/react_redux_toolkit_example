@@ -11,7 +11,7 @@ const counterSlice = createSlice({
       state.counter--;
     },
     reset(state, action) {
-      state.counter++;
+      state.counter -= state.counter;
     },
     addByTen(state, action) {
       state.counter += action.payload;
